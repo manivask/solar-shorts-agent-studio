@@ -1,3 +1,4 @@
 label small{font:10px 'DM Mono',monospace;color:#7482aa;float:right}
 .pick-title{width:100%;background:transparent;color:var(--cyan);text-align:left;padding:9px 2px 0;font:10px 'DM Mono',monospace;letter-spacing:.04em}
 .pick-title:hover{color:var(--lime)}
+.progress-copy{position:absolute;left:18px;right:18px;bottom:43px;display:flex;justify-content:space-between;color:#8e9abe;font:10px 'DM Mono',monospace}.progress-copy b{color:#dbe6ff}.progress-track{position:absolute;left:18px;right:18px;bottom:31px;height:4px;border-radius:5px;background:#0a1027;overflow:hidden}.progress-track i{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--cyan),var(--lime));border-radius:inherit;transition:width .23s linear}.agent-card.done .progress-track i{background:var(--lime)}
