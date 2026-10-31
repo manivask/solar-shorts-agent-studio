@@ -17,6 +17,10 @@ Open `index.html` in a browser, or serve the folder with any static web server.
 
 Edit [`titles.txt`](titles.txt) in any plain-text editor (including Notepad). Put one title on each line; lines that begin with `#` are notes. On opening the dashboard, and whenever **Pick another title** is pressed, Orbit Studio randomly chooses one entry from this file for the next agent run.
 
+## Connect YouTube later
+
+Use [YOUTUBE_SETUP.md](YOUTUBE_SETUP.md) for the one-time Google Cloud and OAuth configuration. Do not commit OAuth secrets to this repository.
+
 ## Production integrations to add
 
 The UI is intentionally safe by default: it demonstrates each handoff but does not invent external media, create an account connection, or publish.
