@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orbit Studio — Shorts Agent Pipeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="title-picker.css" />
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <main>
+    <nav><a class="brand" href="#"><span class="brand-orbit">◉</span> ORBIT <i>studio</i></a><div class="nav-status"><span></span> Workflow ready</div></nav>
+
+    <section class="hero">
+      <div><p class="eyebrow">MULTI-AGENT VIDEO STUDIO</p><h1>From a spark of curiosity<br>to a <em>Short</em> in orbit.</h1><p class="lede">Four specialist agents research, write, produce, and validate vertical educational videos—passing a clear package to the next expert.</p></div>
+      <aside class="brief-card"><div class="brief-top"><span>NEW MISSION</span><b>10 SEC</b></div><label for="topic">Video title <small>from titles.txt</small></label><input id="topic" value="A tiny tour of our Solar System" maxlength="70" /><button class="pick-title" id="pickTitle">✦ Pick another title</button><div class="brief-actions"><button id="startButton">Launch workflow <span>→</span></button><button class="icon-button" id="resetButton" title="Reset workflow">↺</button></div></aside>
+    </section>
+
+    <section class="pipeline" aria-label="Agent workflow">
+      <div class="orbit-line"><span id="traveller"></span></div>
+      <article class="agent-card active" data-agent="0"><div class="agent-number">01</div><div class="agent-icon research">⌕</div><div class="agent-copy"><p>SCOUT</p><h2>Research agent</h2><small>Sources facts & visuals</small></div><div class="agent-state"><span></span><b>Ready</b></div><div class="handoff" id="handoff0">Awaiting launch</div></article>
+      <article class="agent-card" data-agent="1"><div class="agent-number">02</div><div class="agent-icon script">✦</div><div class="agent-copy"><p>VOICE</p><h2>Script agent</h2><small>Writes a 10-sec narration</small></div><div class="agent-state"><span></span><b>Queued</b></div><div class="handoff" id="handoff1">Research package</div></article>
+      <article class="agent-card" data-agent="2"><div class="agent-number">03</div><div class="agent-icon video">▶</div><div class="agent-copy"><p>MAKER</p><h2>Video agent</h2><small>Composes 9:16 short</small></div><div class="agent-state"><span></span><b>Queued</b></div><div class="handoff" id="handoff2">Script + media</div></article>
+      <article class="agent-card" data-agent="3"><div class="agent-number">04</div><div class="agent-icon publish">↗</div><div class="agent-copy"><p>GUARDIAN</p><h2>Publish agent</h2><small>Validates & stages upload</small></div><div class="agent-state"><span></span><b>Queued</b></div><div class="handoff" id="handoff3">Final render</div></article>
+    </section>
+
+    <section class="workbench">
+      <header><div><p class="eyebrow">MISSION CONTROL</p><h2>Handoff console</h2></div><div id="runStatus" class="run-status">Idle · choose a topic to begin</div></header>
+      <div class="console-grid">
+        <div class="feed" id="feed" aria-live="polite"><div class="empty"><span>✦</span><p>Each agent will leave a visible handoff here.</p><small>No black boxes. Review every decision before publishing.</small></div></div>
+        <aside class="preview" id="preview"><div class="phone"><div class="phone-bar">9:16 · 10.0 SEC</div><div class="planet planet-1"></div><div class="planet planet-2"></div><div class="preview-content"><span>OUR COSMIC<br>NEIGHBORHOOD</span><small>Swipe up to explore</small></div></div><p>Short preview</p></aside>
+      </div>
+    </section>
+
+    <section class="safety"><div class="safety-mark">✓</div><div><h3>Human-approved publishing</h3><p>Guardian checks duration, format, claims, captions, and rights before it prepares an upload. It never publishes without your connected YouTube channel and approval.</p></div><button id="connectButton">Connect YouTube <span>↗</span></button></section>
+  </main>
+
+  <dialog id="connectDialog"><button class="dialog-close" id="closeDialog">×</button><p class="eyebrow">YOUTUBE CONNECTION</p><h2>Ready when you are.</h2><p>To enable uploads, connect the Google account that owns the YouTube channel with Google OAuth. Your Google email alone is not enough—Google requires a Cloud OAuth client and your approval for each publishing scope.</p><ul><li>Google Cloud project with YouTube Data API v3 enabled</li><li>OAuth client ID and redirect URL</li><li>Your channel selected after sign-in</li></ul><button id="acknowledge">I’ll connect my channel later</button></dialog>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Orbit Studio title library
+# Add one title per line. Lines beginning with # are ignored.
+# The app chooses a random title when it opens or when “Pick another title” is pressed.
+
+A tiny tour of our Solar System
+Why is Earth called the Blue Planet?
+Meet the biggest planet: Jupiter
+Saturn's rings are made of what?
+The Sun is a star, not a planet
+Which planet has the shortest year?
+Mars: our red neighbor in space
+Neptune has the fastest winds
+How many planets orbit our Sun?
+Could you stand on Venus?
